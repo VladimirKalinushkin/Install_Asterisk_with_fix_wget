@@ -48,7 +48,13 @@ ufw allow 10000:20000/udp
 #     fi
 # done
 
-cp Lib_Asterisk_Main/asterisk-20-current.tar.gz asterisk-20-current.tar.gz
+if [[ -f "/Lib_Asterisk_Main/asterisk-20-current.tar.gz" ]]
+then
+    cp Lib_Asterisk_Main/asterisk-20-current.tar.gz asterisk-20-current.tar.gz
+else
+    wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz
+    mv asterisk-20-current.tar.gz asterisk-20-current.tar.gz
+fi
 tar -xzf asterisk-20-current.tar.gz
 
 
