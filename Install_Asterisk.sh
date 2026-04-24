@@ -105,11 +105,11 @@ ldconfig
 cp /etc/default/asterisk /etc/default/asterisk.backup
 cp /etc/asterisk/asterisk.conf /etc/asterisk/asterisk.conf.backup
 
-# sed -i '/AST_USER/cAST_USER="asterisk"' /etc/default/asterisk
-# sed -i '/AST_GROUP/cAST_GROUP="asterisk"' /etc/default/asterisk
+sed -i '/AST_USER/cAST_USER="asterisk"' /etc/default/asterisk
+sed -i '/AST_GROUP/cAST_GROUP="asterisk"' /etc/default/asterisk
 
-# sed -i '/runuser/crunuser = asterisk' /etc/asterisk/asterisk.conf
-# sed -i '/rungroup/crungroup = asterisk' /etc/asterisk/asterisk.conf
+sed -i '/runuser/crunuser = asterisk' /etc/asterisk/asterisk.conf
+sed -i '/rungroup/crungroup = asterisk' /etc/asterisk/asterisk.conf
 
 # vim /etc/default/asterisk
 # vim /etc/asterisk/asterisk.conf
